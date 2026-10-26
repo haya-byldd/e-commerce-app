@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "firstName": "Haya",
+      "lastName": "",
+      "email": "test@gmail.com",
+      "phoneNumber": "1234567895",
+      "password": "test@123",
+      "confirmPassword": "test@123",
+      "subscribe": false,
+      "termsCondition": true,
+      "id": 1
+    },
+    {
+      "firstName": "Haya",
+      "lastName": "",
+      "email": "test@gmail.com",
+      "phoneNumber": "1234567895",
+      "password": "test@123",
+      "confirmPassword": "test@123",
+      "subscribe": false,
+      "termsCondition": true,
+      "id": 2
+    }
+  
+  ]
+}
