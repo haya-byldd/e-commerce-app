@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
-const Products = () => {
+const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [totalProduct, setTotalProduct] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
@@ -23,7 +23,7 @@ const Products = () => {
 
   }
 
-  const getAllProducts = async () => {
+  const fetchProducts = async () => {
     const res = await fetch(`https://dummyjson.com/products?limit=${limit}&skip=${skip}`);
     const data = await res.json();
     const productsData = data.products;
@@ -31,7 +31,7 @@ const Products = () => {
     setProducts(productsData);
   };
   useEffect(() => {
-    getAllProducts();
+    fetchProducts();
   }, [currentPage]);
 
   return (
@@ -110,4 +110,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default ProductList;

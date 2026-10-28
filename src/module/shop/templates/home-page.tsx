@@ -1,4 +1,4 @@
-import Featured from "../components/home/featured";
+import FeaturedProducts from "../components/home/featured-products";
 import Hero from "../components/home/hero";
 import ProductCategories from "../components/home/product-categories";
 
@@ -7,7 +7,7 @@ const HomePage = () => {
     <main className="max-w-340 w-full mx-auto p-8 space-y-10">
       <Hero />
       <ProductCategories/>
-      <Featured/>
+      <FeaturedProducts/>
     </main>
   );
 };

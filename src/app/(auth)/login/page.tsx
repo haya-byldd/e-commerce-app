@@ -1,9 +1,9 @@
-import LoginForm from "@/module/auth/templates/login"
+import LoginForm from "@/module/auth/templates/login-form"
 
-const Login = () => {
+const LoginPage = () => {
     return(
         <LoginForm/>
     )
 }
 
-export default Login;
+export default LoginPage;

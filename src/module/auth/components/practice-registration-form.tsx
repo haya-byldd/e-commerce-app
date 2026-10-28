@@ -22,10 +22,10 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>
 
-const formSubmit = (data : FormData) => {
+const handlePracticeSubmit = (data : FormData) => {
   console.log(data)
 }
-export default function RHFZod() {
+export default function PracticeRegistrationForm() {
   const { register, handleSubmit, formState: { errors } } = useForm<FormData>({resolver: zodResolver(schema)});
 
   return (
@@ -38,7 +38,7 @@ export default function RHFZod() {
           </p>
         </div>
 
-        <form noValidate onSubmit={handleSubmit(formSubmit)}>
+        <form noValidate onSubmit={handleSubmit(handlePracticeSubmit)}>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <div>
               <label htmlFor="fullName" className={labelClass}>Full Name</label>

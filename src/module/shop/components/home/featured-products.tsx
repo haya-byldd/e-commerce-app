@@ -4,11 +4,11 @@ import { FaStar } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const Featured = () => {
+const FeaturedProducts = () => {
   const [products, setProducts] = useState([]);
   const limit = 8;
 
-  const getAllProducts = async () => {
+  const fetchFeaturedProducts = async () => {
     const res = await fetch(`https://dummyjson.com/products?limit=${limit}`);
     const data = await res.json();
     const productsData = data.products;
@@ -17,7 +17,7 @@ const Featured = () => {
     console.log(productsData);
   };
   useEffect(() => {
-    getAllProducts();
+    fetchFeaturedProducts();
   }, []);
 
   return (
@@ -98,4 +98,4 @@ const Featured = () => {
   );
 };
 
-export default Featured;
+export default FeaturedProducts;

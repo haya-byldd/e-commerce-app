@@ -20,7 +20,7 @@ const LoginForm = () => {
     formState: { errors, isSubmitting },
   } = useForm<Schema>({ resolver: zodResolver(validationSchema) });
 
-  const submitData = async (formData: Schema) => {
+  const handleLogin = async (formData: Schema) => {
     try {
       const res = await fetch("https://dummyjson.com/auth/login", {
         method: "POST",
@@ -47,7 +47,7 @@ const LoginForm = () => {
       <form
         className="space-y-4"
         noValidate
-        onSubmit={handleSubmit(submitData)}
+        onSubmit={handleSubmit(handleLogin)}
       >
         <div>
           <label htmlFor="email" className="block text-sm ">

@@ -1,6 +1,6 @@
 
 
-const categoriesOption= [
+const categoryOptions= [
   {
     id: "beauty",
     value: "beauty",
@@ -42,7 +42,7 @@ const stockOptions = [
     label: "Out of stock",
   }
 ]
-const SideBar = () => {
+const ProductFilters = () => {
     return (
         <aside className="max-w-2xs w-full border border-solid border-border p-4 h-150 rounded-card">
             <div className=" border-border border-b">
@@ -51,7 +51,7 @@ const SideBar = () => {
 
             <div className="space-y-2 my-5">
                 <h4 className="font-bold">Category</h4>
-                {categoriesOption.map((option:any) => {
+                {categoryOptions.map((option:any) => {
                     const {id, label,value} = option
                     return(
                         <div key={value} className="flex gap-1">
@@ -81,4 +81,4 @@ const SideBar = () => {
     )
 }
 
-export default SideBar;
+export default ProductFilters;

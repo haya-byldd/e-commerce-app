@@ -1,9 +1,9 @@
-import ProductsPage from "@/module/shop/templates/products"
+import ProductsPage from "@/module/shop/templates/products-page"
 
-const Products = () => {
+const ProductsRoutePage = () => {
     return (
         <ProductsPage/>
     )
 }
 
-export default Products
+export default ProductsRoutePage

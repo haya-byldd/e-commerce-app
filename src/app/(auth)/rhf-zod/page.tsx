@@ -1,9 +1,9 @@
-import RHFZod from "@/module/auth/components/practice-rhf-zod"
+import PracticeRegistrationForm from "@/module/auth/components/practice-registration-form"
 
-const RHFForm = () => {
+const RhfZodPage = () => {
     return(
-        <RHFZod/>
+        <PracticeRegistrationForm/>
     )
 }
 
-export default RHFForm;
+export default RhfZodPage;

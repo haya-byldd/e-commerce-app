@@ -48,7 +48,7 @@ const SignUpForm = () => {
     formState: { errors, isSubmitting },
   } = useForm<SignupData>({ resolver: zodResolver(schema) });
 
-  const submitForm = async (data: SignupData) => {
+  const handleSignUp = async (data: SignupData) => {
     try {
       const response = await fetch("http://localhost:8000/users", {
         method: "POST",
@@ -76,7 +76,7 @@ const SignUpForm = () => {
       <form
         className="space-y-4"
         noValidate
-        onSubmit={handleSubmit(submitForm)}
+        onSubmit={handleSubmit(handleSignUp)}
       >
         <div>
           <label htmlFor="firstName" className="block text-sm ">
