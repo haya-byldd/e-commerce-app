@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from 'sonner';
+import Navbar from "@/module/shop/components/layout/navbar";
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,7 +18,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col font-sans">{children} <Toaster richColors position="top-center" /></body>
+      <body className="min-h-full flex flex-col font-sans">
+        <Navbar/>
+        {children} 
+        <Toaster richColors position="top-center" /></body>
     </html>
   );
 }
